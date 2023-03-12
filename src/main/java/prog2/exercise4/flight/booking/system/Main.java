@@ -17,14 +17,10 @@ public class Main
         Scanner myscanner = new Scanner(System.in);
         FlightBooking fb = new FlightBooking("null", depart, returnDate, 2, 3); 
        
-       
-        FlightBooking.BookingClass choice1 = FlightBooking.BookingClass.FIRST;
-        FlightBooking.BookingClass choice2 = FlightBooking.BookingClass.BUSINESS;
-        FlightBooking.BookingClass choice3 = FlightBooking.BookingClass.ECONOMY;
         System.out.println("Please pick the number of class you would like to travel in " );
-        System.out.println("1." + choice1);
-        System.out.println("2." + choice2);
-        System.out.println("3." + choice3);
+        System.out.println("1." + "First");
+        System.out.println("2." + "Business");
+        System.out.println("3." + "Economy");
         String num1 = myscanner.nextLine();
         fb.setBookingClass(num1);
         FlightBooking.BookingClass BookingClass = fb.getBookingclass();
@@ -33,22 +29,16 @@ public class Main
         System.out.println("Please pick the choice(number) of 1.One way /n 2.Return ");
         String num2 = myscanner.nextLine();
         fb.setTripType(num2);
-        FlightBooking.TripType triptype = fb.getTripType();
+        FlightBooking.TripType triptype = fb.getTriptype();
 
 
-         FlightBooking.TripSource c1 = FlightBooking.TripSource.NANJING;
-         FlightBooking.TripSource c2 = FlightBooking.TripSource.BEIJING;
-         FlightBooking.TripSource c3 = FlightBooking.TripSource.OULU;
-         FlightBooking.TripSource c4 = FlightBooking.TripSource.HELSINKI;
-         FlightBooking.TripSource c5 = FlightBooking.TripSource.SHANGHAI;
-         FlightBooking.TripSource c6 = FlightBooking.TripSource.PARIS;
          System.out.println("Please pick the number of tripsouce you would like to travel" );
-         System.out.println("1." + c1);
-         System.out.println("2." + c2);
-         System.out.println("3." + c3);
-         System.out.println("4." + c4);
-         System.out.println("5." + c5);
-         System.out.println("6." + c6);
+         System.out.println("1." + "Nanjing");
+         System.out.println("2." + "Beijing");
+         System.out.println("3." + "Oulu");
+         System.out.println("4." + "Helsinki");
+         System.out.println("5." + "Shanghai");
+         System.out.println("6." + "Paris");
          String num = myscanner.nextLine();
          fb.setTripSource(num);
         FlightBooking.TripSource result = fb.getTripSource();
@@ -57,23 +47,16 @@ public class Main
         //FlightBooking.SourceAirport go = fb.getSourceairport();
 
         
- 
-         FlightBooking.TripDestination d1 = FlightBooking.TripDestination.NANJING;
-         FlightBooking.TripDestination d2 = FlightBooking.TripDestination.BEIJING;
-         FlightBooking.TripDestination d3 = FlightBooking.TripDestination.OULU;
-         FlightBooking.TripDestination d4 = FlightBooking.TripDestination.HELSINKI;
-         FlightBooking.TripDestination d5 = FlightBooking.TripDestination.SHANGHAI;
-         FlightBooking.TripDestination d6 = FlightBooking.TripDestination.PARIS;
          System.out.println("Please pick the number of tripdestination you would like to go" );
-         System.out.println("1." + d1);
-         System.out.println("2." + d2);
-         System.out.println("3." + d3);
-         System.out.println("4." + d4);
-         System.out.println("5." + d5);
-         System.out.println("6." + d6);
+         System.out.println("1." + "Nanjing");
+         System.out.println("2." + "Beijing");
+         System.out.println("3." + "Oulu");
+         System.out.println("4." + "Helsinki");
+         System.out.println("5." + "Shanghai");
+         System.out.println("6." + "Paris");
          String num3 = myscanner.nextLine();
          fb.setTripDestination(num,num3);
-        FlightBooking.TripDestination result2 = fb.getTripdestination();
+        FlightBooking.TripDestination result2 = fb.getTripDestination();
 
         fb.setDestinationAirport(result2);
         //FlightBooking.SourceAirport back = fb.getSourceairport();
@@ -89,13 +72,6 @@ public class Main
         fb.setReturnDate(returningDate);
         LocalDate returningDate2 = fb.getReturnDate();
 
-        fb.setaaa(result,result2);
-        String doi = fb.getAaa();
-        fb.setBbb(BookingClass);
-        String doi2 = fb.getBbb();
-        fb.setCcc(num2);
-        String doi3 = fb.getCcc();
-        fb.setTicketNumber(BookingClass, triptype);
         String ticketNumber = fb.getTicketNumber();
         
         System.out.println("Dear passenger please input Your FullName:");
@@ -106,13 +82,11 @@ public class Main
         int adultpassengers = myscanner.nextInt();
         myscanner.close();
         String company = fb.getFlightCompany();
-        
         fb.setTotalPassengers(adultpassengers, childpassengers);
         int totalPassengers = fb.getTotalPassengers();
+
         fb.setDepartingTicketPrice(childpassengers,adultpassengers);
-        double departprice = fb.getDepartingTicketPrice();
         fb.setReturnTicketPrice();
-        double returnprice = fb.getReturnTicketPrice();
         fb.setTotalTicketPrice();
         double totalTicketPrice = fb.getTotalTicketPrice();
       
