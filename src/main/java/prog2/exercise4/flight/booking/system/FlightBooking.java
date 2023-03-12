@@ -3,7 +3,7 @@ import java.time.LocalDate;
 
 public class FlightBooking {
 private String flightCompany = "Flights-of-Fancy";
-private String flightID = "rdytvf68tr68";
+private String flightID = "rdytvf68tr6";
 private String passengerFullName;
 private double departingTicketPrice;
 private double returnTicketPrice;
